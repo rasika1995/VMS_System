@@ -7,7 +7,7 @@ import { SubscriberComponent } from './component/subscriber/subscriber.component
 import { MaterialModule } from './material-module';
 import { SubscriberService } from './services/subscriber-service/subscriber.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [SubscriberService],
   bootstrap: [AppComponent]

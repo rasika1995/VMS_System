@@ -1,12 +1,9 @@
 <h1>subscribers</h1>
     
     
-    <div *ngIf="dataSource">
-        <div class="no-data" *ngIf="dataSource.length == 0">
-          <span><b>No Available Data</b></span>
-        </div>
+    
   
-        <div *ngIf="dataSource.length != 0">
+        <div>
          
           <table mat-table [dataSource]="dataSource">
         
@@ -32,4 +29,4 @@
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
           </table>
         </div>
-    </div>
+    
