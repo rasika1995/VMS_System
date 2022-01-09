@@ -4,7 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SubscriberComponent } from './component/subscriber/subscriber.component';
+import { MaterialModule } from './material-module';
 import { SubscriberService } from './services/subscriber-service/subscriber.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +16,9 @@ import { SubscriberService } from './services/subscriber-service/subscriber.serv
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule,
+    BrowserAnimationsModule,
   ],
   providers: [SubscriberService],
   bootstrap: [AppComponent]

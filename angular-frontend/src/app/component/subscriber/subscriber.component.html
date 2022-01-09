@@ -1,1 +1,35 @@
-<p>subscriber works!</p>
+<h1>subscribers</h1>
+    
+    
+    <div *ngIf="dataSource">
+        <div class="no-data" *ngIf="dataSource.length == 0">
+          <span><b>No Available Data</b></span>
+        </div>
+  
+        <div *ngIf="dataSource.length != 0">
+         
+          <table mat-table [dataSource]="dataSource">
+        
+            <!-- MSISDN Column -->
+            <ng-container matColumnDef="MSISDN">
+              <th mat-header-cell *matHeaderCellDef> MSISDN </th>
+              <td mat-cell *matCellDef="let element"> {{element.MSISDN}} </td>
+            </ng-container>
+        
+            <!-- subcriberPin Column -->
+            <ng-container matColumnDef="subcriberPin">
+              <th mat-header-cell *matHeaderCellDef> subcriberPin </th>
+              <td mat-cell *matCellDef="let element"> {{element.subcriberPin}} </td>
+            </ng-container>
+
+             <!-- subcriberPin Column -->
+             <ng-container matColumnDef="accountStatus">
+                <th mat-header-cell *matHeaderCellDef> accountStatus </th>
+                <td mat-cell *matCellDef="let element"> {{element.accountStatus}} </td>
+            </ng-container>
+      
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+    </div>
